@@ -1,0 +1,49 @@
+html{
+    overflow-x: hidden;
+    background: url(fon.png);
+}
+.gallery{
+    display: flex;
+    
+    justify-content: space-around;
+
+}
+h1{
+    background-color:beige;
+}
+.text{
+    text-align: center;
+    font-size:30px;
+    background-color:beige;
+}
+body{
+    font-family: serif;
+    margin:0;
+    
+    color:chocolate;
+}
+img {
+    filter: drop-shadow(30px 10px 4px #deb887);
+}
+.gallery {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.gallery:hover {
+  border: 70px solid #deb887;
+  border-radius: 50%;
+}
+h3{
+    font-size: 50px;
+    text-align: center;
+    background-color: beige;
+}
+a{
+    color:black;
+    font-size:50px;
+    background-color: beige;
+}

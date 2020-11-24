@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+    <title> boring task
+    </title>
+
+<style>
+
+html {
+
+background-color: white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+function get_browser_name(){
+
+var ua = navigator.userAgent;
+
+if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+
+if (ua.search(/Firefox/) > 0) return 'Firefox';
+
+if (ua.search(/Opera/) > 0) return 'Opera';
+
+if (ua.search(/Safari/) > 0) return 'Safari';
+
+if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+
+return 'Не определен';
+
+}
+
+var browser = get_browser_name();
+
+document.write('Имя вашего браузера - '+browser);
+
+window.onload = function(){
+
+(function(){
+
+var date = new Date();
+
+var time = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
+
+document.getElementsByTagName('div')[0].innerHTML = time;
+
+window.setTimeout(arguments.callee, 1000);
+
+})();
+
+};
+
+function timer(){
+
+var obj=document.getElementById('timer');
+
+obj.innerHTML--;
+
+if(obj.innerHTML==0){alert('Text');setTimeout(function(){},1000);}
+
+else{setTimeout(timer,1000);}
+
+}
+
+setTimeout(timer,1000);
+
+function myFunction(){
+
+var x = document.getElementById('elem1').value;
+
+document.getElementById('result').innerHTML = x;
+
+}
+
+function min(){
+
+var x = document.getElementById('frst').value;
+
+var y = document.getElementById('scnd').value;
+
+document.getElementById('res').innerHTML = Math.min(x, y);
+
+}
+
+function stepen(){
+
+var x = document.getElementById('n1').value;
+
+var y = document.getElementById('st').value;
+
+document.getElementById('resu').innerHTML = Math.pow(x, y);
+
+}
+
+</script>
+
+<div></div>
+
+<div id="timer">5</div>
+
+<input id="elem1" type="text">
+
+<button onclick="myFunction()">Click</button>
+
+<div id="result"></div>
+
+<br>
+
+<input type="number" id="frst">
+
+<input type="number" id="scnd">
+
+<button onclick="min()">Click</button>
+
+<div id="res"></div>
+
+<br>
+
+<input type="number" id="n1">
+
+<input type="number" id="st">
+
+<button onclick="stepen()">Click</button>
+
+<div id="resu"></div>
+
+</body>
+
+</html> 
